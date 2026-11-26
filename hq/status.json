@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T23:45",
+ "generated": "2026-11-27T00:00",
  "next_draft": "11/27 (금) 09:00",
  "draft_days": [
   "월",
@@ -123,49 +123,49 @@
  "roles": {
   "plan": {
    "total": 3,
-   "today": 3,
+   "today": 0,
    "unit": "건",
    "now": "다음 주제: 대금 소리는 왜 떨리듯 울릴까",
    "st": "idle"
   },
   "draft": {
    "total": 4038,
-   "today": 4038,
+   "today": 0,
    "unit": "자",
    "now": "최근: 거문고, 왜 선비의 악기였을까",
    "st": "idle"
   },
   "check": {
    "total": 10,
-   "today": 10,
+   "today": 0,
    "unit": "개",
    "now": "최근 출처 4개 통과",
    "st": "idle"
   },
   "refs": {
    "total": 7,
-   "today": 7,
+   "today": 0,
    "unit": "건",
    "now": "최근 참고 3건 · 공공 사진 1장",
    "st": "idle"
   },
   "design": {
    "total": 12,
-   "today": 12,
+   "today": 0,
    "unit": "장",
    "now": "최근 한지와 먹 6장",
    "st": "idle"
   },
   "approve": {
    "total": 1,
-   "today": 1,
+   "today": 0,
    "unit": "건",
    "now": "승인 기다리는 초안 2건",
    "st": "wait"
   },
   "threads": {
    "total": 1,
-   "today": 1,
+   "today": 0,
    "unit": "건",
    "now": "최근 게시 완료",
    "st": "idle",
@@ -173,7 +173,7 @@
   },
   "instagram": {
    "total": 1,
-   "today": 1,
+   "today": 0,
    "unit": "건",
    "now": "최근 게시 완료",
    "st": "idle",
@@ -181,7 +181,7 @@
   },
   "naver": {
    "total": 1,
-   "today": 1,
+   "today": 0,
    "unit": "건",
    "now": "최근 게시 완료",
    "st": "idle",
