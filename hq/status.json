@@ -1,0 +1,54 @@
+{
+ "generated": "2026-11-26T21:40",
+ "next_draft": "11/27 (금) 09:00",
+ "draft_days": [
+  "월",
+  "수",
+  "금"
+ ],
+ "topics": [
+  "대금 소리는 왜 떨리듯 울릴까",
+  "장단이란 무엇인가: 세마치와 굿거리",
+  "판소리 다섯 바탕 한눈에 보기",
+  "정간보 읽는 법",
+  "가야금 12현과 25현의 차이"
+ ],
+ "topics_left": 9,
+ "counts": {
+  "published": 1,
+  "week": 1,
+  "week_target": 3,
+  "pending": 0,
+  "problems": 0,
+  "chars": 1399
+ },
+ "posts": [
+  {
+   "id": "20261126-1957-가야금-산조는-어떻게-생겨났나",
+   "title": "가야금 산조, 어떻게 생겨났을까요",
+   "topic": "가야금 산조는 어떻게 생겨났나",
+   "state": "published",
+   "created": "2026-11-26T19:57:29",
+   "chars": 1399,
+   "sources": 3,
+   "channels": {
+    "threads": {
+     "ok": true,
+     "link": "https://www.threads.com/@composer.gugak/post/DgM8sOlkUw_",
+     "error": null
+    },
+    "instagram": {
+     "ok": true,
+     "link": "https://www.instagram.com/p/DgM80yzDZMr/",
+     "error": null
+    },
+    "naver": {
+     "ok": true,
+     "link": "https://blog.naver.com/PostView.naver?blogId=composer_gugak&Redirect=View&logNo=224493584590&categoryNo=1&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=10865",
+     "error": null,
+     "waiting": false
+    }
+   }
+  }
+ ]
+}
