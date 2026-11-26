@@ -11,23 +11,23 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="신뚱 본부">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* VOICE work: 밤에도 켜두는 작업실 관제 화면, 촘촘하고 정돈된
    IDEA 한옥 공방: 위에서 보면 부서별 작업대와 다방이 있는 작업실, 전체 탭은 그 작업대의 명패들
    PICTURE 작업실 탭의 움직이는 픽셀 공방 / 전체 탭의 촘촘한 일꾼 카드 격자
    COLOUR 먹빛 밤 바탕, 한지빛 글자, 오방 황을 지금 단계 강조에만, 상태는 청·황·적
-   TYPE Noto Serif KR 제목 + IBM Plex Sans KR 본문·숫자
+   TYPE Noto Sans KR 하나로 제목·본문·숫자
    LAYOUT 상단 요약 띠 → 탭 / 전체: 필터 + 5~6열 카드 / 작업실: 공방 2 + 기록 1 / 폰은 세로로 쌓음 */
 :root{color-scheme:dark;--bg:#0d1119;--card:#151b27;--card2:#1a2231;--line:#253043;--ink:#ece8de;--mute:#8b95a6;--dim:#5f697a;
 --blue:#6aa3d8;--red:#e8746f;--yellow:#efc35a;--white:#cfd3da;--black:#6b7587;--ok:#6aa3d8;--wait:#efc35a;--err:#e8746f;--go:#7cc79a}
 *{box-sizing:border-box;min-width:0}
 html,body{margin:0}
-body{background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans KR",system-ui,sans-serif;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "Noto Sans KR",system-ui,sans-serif;overflow-x:clip}
 .band{padding:clamp(16px,2.6vw,32px) max(3.5vw,16px)}
 .wrap{max-width:1320px;margin:0 auto}
 .head{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between}
-h1{font:700 clamp(28px,3.4vw,40px)/1.1 "Noto Serif KR",serif;margin:0;letter-spacing:-.02em}
+h1{font:700 clamp(28px,3.4vw,40px)/1.1 "Noto Sans KR",sans-serif;margin:0;letter-spacing:-.02em}
 .sub{color:var(--mute);margin:6px 0 0;font-size:14px}
 .tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:4px}
 .tabs a{color:var(--mute);text-decoration:none;font-weight:500;padding:8px 18px;border-radius:20px;min-height:40px;display:flex;align-items:center;white-space:nowrap}
@@ -35,13 +35,13 @@ h1{font:700 clamp(28px,3.4vw,40px)/1.1 "Noto Serif KR",serif;margin:0;letter-spa
 a:focus-visible,button:focus-visible,canvas:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
 .sum{display:grid;grid-template-columns:minmax(0,2.2fr) repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
 .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
-.big{font:700 clamp(22px,2.4vw,28px)/1.1 "IBM Plex Sans KR";white-space:nowrap;font-variant-numeric:tabular-nums}
+.big{font:700 clamp(22px,2.4vw,28px)/1.1 "Noto Sans KR";white-space:nowrap;font-variant-numeric:tabular-nums}
 .lab{color:var(--mute);font-size:13px}
 .meter{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:9px}
 .meter span{display:block;height:100%;background:var(--go);transition:width .8s}
 .pane[hidden]{display:none}
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
-.f{font:500 14px "IBM Plex Sans KR";min-height:38px;padding:0 14px;border-radius:19px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:7px}
+.f{font:500 14px "Noto Sans KR";min-height:38px;padding:0 14px;border-radius:19px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:7px}
 .f i{width:8px;height:8px;border-radius:2px}
 .f[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:10px}
@@ -55,7 +55,7 @@ a:focus-visible,button:focus-visible,canvas:focus-visible{outline:3px solid var(
 .s-dep{background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue)}
 .s-idle{background:color-mix(in srgb,var(--black) 28%,transparent);color:#aab3c2}
 .nums{display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
-.nums b{display:block;font:700 26px/1 "IBM Plex Sans KR";font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.nums b{display:block;font:700 26px/1 "Noto Sans KR";font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .nums small{display:block;color:var(--mute);font-size:11.5px;margin-top:3px;white-space:nowrap}
 .nums .rt{text-align:right}
 .scene{width:100%;height:64px;display:block}
@@ -98,7 +98,7 @@ a:focus-visible,button:focus-visible,canvas:focus-visible{outline:3px solid var(
 .side li{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14px}
 .side li small{display:block;color:var(--mute);font-size:12px}
 .cats{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.cat{font:500 13px "IBM Plex Sans KR";border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:0 12px;min-height:34px;cursor:pointer}
+.cat{font:500 13px "Noto Sans KR";border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:0 12px;min-height:34px;cursor:pointer}
 .cat[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 svg text{paint-order:stroke;stroke:#0a1020;stroke-width:4px}
 @keyframes tw{0%,100%{opacity:.25}50%{opacity:.9}}
@@ -108,9 +108,9 @@ svg text{paint-order:stroke;stroke:#0a1020;stroke-width:4px}
 @media(max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.w{padding:9px 9px 10px;gap:6px}.nums b{font-size:19px}.nums small{font-size:10.5px}.nm b{font-size:14px}.chips em{font-size:11px;padding:0 6px}.ft span:last-child{font-size:11px}.job{font-size:12.5px}}
 .live{margin:0 0 22px}
 .lhead{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between;margin:4px 0 10px}
-.lhead h2{font:700 20px/1.2 "Noto Serif KR",serif;margin:0}
+.lhead h2{font:700 20px/1.2 "Noto Sans KR",sans-serif;margin:0}
 .lk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.lk .box b{display:block;font:600 clamp(24px,3vw,32px)/1.1 "IBM Plex Sans KR";font-variant-numeric:tabular-nums}
+.lk .box b{display:block;font:600 clamp(24px,3vw,32px)/1.1 "Noto Sans KR";font-variant-numeric:tabular-nums}
 .lcols{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px;margin-top:12px}
 .plist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .post{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
@@ -618,7 +618,7 @@ function isoPerson(a,t){
 }
 // 방이 작게 그려질 때(휴대폰) 글자·말풍선도 같이 줄임
 const UI=()=>{const d=window.devicePixelRatio||1;return d*Math.min(1,Math.max(.6,S/d/2))};
-const fontPx=(css,wgt)=>{const dpr=UI();return `${wgt} ${Math.round(css*dpr)}px "IBM Plex Sans KR",sans-serif`};
+const fontPx=(css,wgt)=>{const dpr=UI();return `${wgt} ${Math.round(css*dpr)}px "Noto Sans KR",sans-serif`};
 function label(txt,x,y,c,al="center",size=12,wgt=600){const dpr=UI();ctx.font=fontPx(size,wgt);ctx.textAlign=al;ctx.textBaseline="top";ctx.lineJoin="round";ctx.lineWidth=3*dpr;ctx.strokeStyle="rgba(10,14,21,.9)";ctx.strokeText(txt,x,y);ctx.fillStyle=c;ctx.fillText(txt,x,y)}
 const stC=a=>a.w.st==="run"?"#d6f0de":a.w.st==="wait"?"#efc35a":a.w.st==="dep"?"#a9cbef":"#c3cad6";
 function drawIso(t){
@@ -762,7 +762,7 @@ function drawSky(){
   sx.fillStyle=focus?ACC:near?"#d4d4d4":n.type==="topic"?"#b3b3b3":"#8c8c8c";
   sx.beginPath();sx.arc(p[0],p[1],r,0,7);sx.fill();
   const show=n.type==="topic"?true:(near||z>1.35);
-  if(show){const fs=n.type==="topic"?12:11;sx.font=`${n.type==="topic"?600:400} ${fs}px "IBM Plex Sans KR",sans-serif`;sx.textAlign="center";sx.textBaseline="top";
+  if(show){const fs=n.type==="topic"?12:11;sx.font=`${n.type==="topic"?600:400} ${fs}px "Noto Sans KR",sans-serif`;sx.textAlign="center";sx.textBaseline="top";
    const la=n.type==="topic"?1:near?1:Math.min(1,(z-1.35)/.4);sx.globalAlpha=(F&&!near?.25:1)*la;sx.fillStyle=focus?"#ffffff":"#dadada";sx.fillText(n.k,p[0],p[1]+r+4)}
   sx.globalAlpha=1;n.scr=[p[0],p[1],r]});
  dirty=false;
