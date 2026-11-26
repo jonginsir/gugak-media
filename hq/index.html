@@ -227,7 +227,8 @@ const W=[
  {id:"rev",role:"approve",d:"ship",k:"승인",nick:"총괄 · 최종 승인",who:"jong",run:"사람 · 텔레그램",out:["승인","보류"],desk:13,stage:2},
  {id:"pub",role:"threads",d:"ship",k:"스레드 게시",nick:"이미지와 함께",who:"ai",run:"GitHub · API",out:["스레드"],desk:12,stage:3},
  {id:"scr",role:"instagram",d:"ship",k:"인스타 게시",nick:"캐러셀로",who:"ai",run:"GitHub · API",out:["인스타"],desk:14,stage:3},
- {id:"shp",role:"naver",d:"home",k:"블로그 게시",nick:"형 PC에서 비공개로",who:"ai",run:"형 PC · 크롬",out:["네이버 블로그"],desk:10,stage:3}];
+ {id:"shp",role:"naver",d:"home",k:"블로그 게시",nick:"형 PC에서 비공개로",who:"ai",run:"형 PC · 크롬",out:["네이버 블로그"],desk:10,stage:3},
+ {id:"chf",role:"chief",d:"plan",k:"비서실장",nick:"전 팀 점검 · 아침 보고",who:"ai",run:"GitHub · 매일 08:37",out:["아침 보고","노션 정리","멈춘 일 다시 실행"],desk:3,stage:0}];
 W.forEach(w=>Object.assign(w,{st:"idle",now:"기록 불러오는 중",p:0,today:0,total:0,unit:"건",chars:0,mb:0}));
 W.forEach((w,i)=>w.no=i+1);
 // 일꾼마다 이름·외모·성격·습관·말버릇
@@ -243,6 +244,7 @@ const PERSONA={
  pkg:{name:"윤슬",skin:"#f0c9a0",hair:"#5a3b28",style:"pony",shirt:"#e2b64a",acc:"collar",acc2:"#fff6dc",speed:.036,habit:"cat",trait:"뭘 넘겨줘도 웃으며 받는 싹싹이",quotes:["넘겨줘, 내가 꾸밀게","카드뉴스 6장 끝!","오늘도 포장 완료"]},
  pub:{name:"온새",skin:"#e8b98f",hair:"#1f1f22",style:"neat",shirt:"#f0eee8",acc:"tie",acc2:"#c9514c",speed:.03,habit:"desk",trait:"정시 발행에 목숨 거는 시계 같은 일꾼",quotes:["19시 정각 발행","1분도 늦으면 안 돼","예약 걸어뒀어"]},
  cmp:{name:"신뚱",skin:"#f3d2b0",hair:"#1b1717",style:"long",shirt:"#c9514c",acc:"hanbok",acc2:"#f3efe4",speed:.03,habit:"tea",trait:"이 공방의 주인이자 음악가",quotes:["이 가락 어때?","가야금 줄 좀 고르고 올게","편곡 확인했어"]},
+ chf:{name:"단아",skin:"#f0c9a0",hair:"#2a2622",style:"bob",shirt:"#2e4a3f",acc:"collar",acc2:"#e9d8a6",glasses:true,speed:.032,habit:"board",trait:"모두의 하루를 챙기는 꼼꼼한 비서실장",quotes:["오늘 할 일 정리했어요","승인 대기 있어요","노션에 올려뒀어요"]},
  rev:{name:"종인",skin:"#e8b98f",hair:"#1f1f22",style:"short",shirt:"#3e4655",acc:"collar",acc2:"#d6dbe4",glasses:true,speed:.03,habit:"tea",trait:"모든 결과물이 지나가는 마지막 관문",quotes:["승인!","이건 출처 한 번 더","좋아, 내보내자"]}};
 PERSONA.arr=PERSONA.cmp;PERSONA.dir=PERSONA.rev;PERSONA.ord=PERSONA.rev;
 W.forEach(w=>{w.ps=PERSONA[w.id];w.name=w.ps.name});
@@ -260,6 +262,7 @@ const OUTFIT={
  pkg:{top:"#f0c95a",lower:"pants",low:"#4d6f9a",shoe:"#efe9dc",collar:"overall",acc:"#4d6f9a",blush:true},
  pub:{top:"#1f232b",sleeve:"#f4f2ec",lower:"pants",low:"#1f232b",shoe:"#0f1013",collar:"vesttie",acc:"#c9514c"},
  cmp:{top:"#d9433e",lower:"skirt",low:"#2a3a6b",shoe:"#f0e6d6",collar:"hanbok",acc:"#f3efe4",norigae:"#efc35a",daenggi:"#c9514c"},
+ chf:{top:"#2e4a3f",lower:"skirt",low:"#1f2a26",shoe:"#15161a",collar:"knit",acc:"#e9d8a6"},
  rev:{top:"#4a515f",lower:"pants",low:"#2b2f38",shoe:"#15161a",collar:"knit",acc:"#e6e9ef"}};
 OUTFIT.arr=OUTFIT.cmp;OUTFIT.dir=OUTFIT.rev;OUTFIT.ord=OUTFIT.rev;
 W.forEach(w=>Object.assign(w.ps,OUTFIT[w.id]));
@@ -374,7 +377,7 @@ document.getElementById("clock").textContent=`실제로 돌아가는 일 ${W.len
 const RW=440,RH=272;
 // 책상 위치 (좌상단). 번호는 일꾼 데이터의 desk와 같음
 const DESK=[[28,64],[84,64],[116,64],[176,64],[28,132],[92,132],[116,132],[160,132],[50,200],[64,200],[154,200],[168,200],[236,64],[236,132],[236,200]];
-const GHOST=new Set([3,4,6,8,9,11]);
+const GHOST=new Set([4,6,8,9,11]);
 const ROLES={13:"최종 승인"};
 const ZONES=[["장단실",16,44,44,48,"#6aa3d8"],["서고",72,44,76,48,"#efc35a"],["화실",72,112,136,48,"#c99be0"],["사랑방",116,180,92,48,"#7cc79a"],["무대",224,44,56,184,"#e8746f"]];
 const TEA=[[348,190],[392,190],[348,214],[392,214],[336,202],[404,202]];
