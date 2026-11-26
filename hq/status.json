@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T01:15",
+ "generated": "2026-11-27T01:24",
  "next_draft": "11/27 (금) 09:00",
  "draft_days": [
   "월",
@@ -161,6 +161,13 @@
    "today": 0,
    "unit": "건",
    "now": "승인 기다리는 초안 2건",
+   "st": "wait"
+  },
+  "chief": {
+   "total": 1,
+   "today": 8,
+   "unit": "건",
+   "now": "오늘 점검 8건 · 형 확인 3건",
    "st": "wait"
   },
   "threads": {
