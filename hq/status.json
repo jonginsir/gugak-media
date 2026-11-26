@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T22:01",
+ "generated": "2026-11-26T22:02",
  "next_draft": "11/27 (금) 09:00",
  "draft_days": [
   "월",
@@ -18,41 +18,11 @@
   "published": 1,
   "week": 1,
   "week_target": 3,
-  "pending": 1,
+  "pending": 0,
   "problems": 0,
   "chars": 1399
  },
  "posts": [
-  {
-   "id": "20261126-2201-자진모리-장단은-왜-신이-날까",
-   "title": "자진모리 장단, 왜 들으면 신이 날까",
-   "topic": "자진모리 장단은 왜 신이 날까",
-   "state": "sent",
-   "created": "2026-11-26T22:01:39",
-   "updated": null,
-   "chars": 1228,
-   "sources": 3,
-   "approved": false,
-   "design": {
-    "ok": true,
-    "slides": 6,
-    "palette": "오방 적황",
-    "refs": 2,
-    "photo": true
-   },
-   "channels": {
-    "threads": {
-     "ok": false,
-     "link": null,
-     "error": null
-    },
-    "instagram": {
-     "ok": false,
-     "link": null,
-     "error": null
-    }
-   }
-  },
   {
    "id": "20261126-1957-가야금-산조는-어떻게-생겨났나",
    "title": "가야금 산조, 어떻게 생겨났을까요",
@@ -92,46 +62,46 @@
  ],
  "roles": {
   "plan": {
-   "total": 2,
-   "today": 2,
+   "total": 1,
+   "today": 1,
    "unit": "건",
    "now": "다음 주제: 대금 소리는 왜 떨리듯 울릴까",
    "st": "idle"
   },
   "draft": {
-   "total": 2627,
-   "today": 2627,
+   "total": 1399,
+   "today": 1399,
    "unit": "자",
-   "now": "최근: 자진모리 장단, 왜 들으면 신이 날까",
+   "now": "최근: 가야금 산조, 어떻게 생겨났을까요",
    "st": "idle"
   },
   "check": {
-   "total": 6,
-   "today": 6,
+   "total": 3,
+   "today": 3,
    "unit": "개",
    "now": "최근 출처 3개 통과",
    "st": "idle"
   },
   "refs": {
-   "total": 3,
-   "today": 3,
+   "total": 0,
+   "today": 0,
    "unit": "건",
-   "now": "최근 참고 2건 · 공공 사진 1장",
+   "now": "최근 참고 0건",
    "st": "idle"
   },
   "design": {
-   "total": 6,
-   "today": 6,
+   "total": 0,
+   "today": 0,
    "unit": "장",
-   "now": "최근 오방 적황 6장",
+   "now": "기본 카드로 진행",
    "st": "idle"
   },
   "approve": {
    "total": 1,
    "today": 1,
    "unit": "건",
-   "now": "승인 기다리는 초안 1건",
-   "st": "wait"
+   "now": "기다리는 초안 없음",
+   "st": "idle"
   },
   "threads": {
    "total": 1,
