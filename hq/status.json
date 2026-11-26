@@ -165,9 +165,9 @@
   },
   "chief": {
    "total": 1,
-   "today": 16,
+   "today": 8,
    "unit": "건",
-   "now": "오늘 점검 16건 · 형 확인 6건",
+   "now": "오늘 점검 8건 · 형 확인 3건",
    "st": "wait"
   },
   "threads": {
