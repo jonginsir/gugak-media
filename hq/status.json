@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T23:15",
+ "generated": "2026-11-26T23:18",
  "next_draft": "11/27 (금) 09:00",
  "draft_days": [
   "월",
@@ -38,7 +38,7 @@
     "slides": 6,
     "palette": "한지와 먹",
     "refs": 3,
-    "photo": false
+    "photo": true
    },
    "channels": {
     "threads": {
@@ -143,10 +143,10 @@
    "st": "idle"
   },
   "refs": {
-   "total": 6,
-   "today": 6,
+   "total": 7,
+   "today": 7,
    "unit": "건",
-   "now": "최근 참고 3건",
+   "now": "최근 참고 3건 · 공공 사진 1장",
    "st": "idle"
   },
   "design": {
