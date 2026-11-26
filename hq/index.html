@@ -172,10 +172,10 @@ a.ch:hover{border-color:var(--ink)}
       </div>
     </div>
   </div>
-  <h3 class="lab" style="margin:0 0 8px" id="demoHead" hidden>일꾼 카드 · 작업실 연출 (예시)</h3>
+  <h3 class="lab" style="margin:0 0 8px" id="demoHead" hidden>일꾼 카드 · 실제 역할별 기록</h3>
   <div class="filters" id="filters" role="group" aria-label="부서로 거르기"></div>
   <div class="grid" id="grid"></div>
-  <p class="note">아래 일꾼 카드와 작업실·그래프는 분위기를 보여주는 연출이야. 위 "실제 게시 현황"만 진짜 기록이고, 15분마다 갱신돼.</p>
+  <p class="note">일꾼 카드 숫자는 실제 기록이야(15분마다 갱신). 작업실 움직임과 지식 그래프는 분위기를 보여주는 연출이야.</p>
 </div></section>
 
 <section class="band pane" id="office" hidden style="padding-top:0"><div class="wrap office">
@@ -187,7 +187,7 @@ a.ch:hover{border-color:var(--ink)}
       <span><i style="background:var(--wait)"></i>사람 확인 줄서기</span>
       <span><i style="background:var(--blue)"></i>다른 일꾼 기다림</span>
       <span><i style="background:var(--black)"></i>다방에서 쉬는 중</span>
-      <span>일을 끝내면 결과물을 들고 포장대로 가져가 · 말풍선은 지금 하는 일 · 공방 동물: 고양이 나비, 강아지 바둑이</span>
+      <span>말풍선은 실제 기록에서 나온 문장 · 가끔 커피 바에 다녀와 · 공방 동물: 고양이 나비, 강아지 바둑이</span>
     </div>
   </div>
   <aside class="log">
@@ -212,27 +212,23 @@ a.ch:hover{border-color:var(--ink)}
 
 <script>
 {
-const DEPTS={plan:["편성국","#6aa3d8"],info:["정보팀","#efc35a"],music:["음악팀","#e8746f"],video:["영상팀","#e8a96f"],ship:["출고","#cfd3da"],shop:["커머스","#d9736f"],ops:["운영","#8b95a6"]};
+const DEPTS={plan:["편성국","#6aa3d8"],info:["정보팀","#efc35a"],design:["디자인팀","#c99be0"],ship:["출고","#cfd3da"]};
 const WHO={ai:{n:"AI",shirt:"#4f7fae",hair:"#2b2f3a"},shin:{n:"신뚱",shirt:"#c9514c",hair:"#1b1717"},jong:{n:"종인",shirt:"#3e4655",hair:"#1f1f22"}};
 const STAGES=["초안","검수","승인","게시"];
 const HAIR=["#2b2f3a","#5a3b28","#1f2430","#7a4e2d","#38302a","#2d2a3f"];
 // 예시 데이터 (desk: 작업실 책상 번호)
+// 실제로 돌아가는 일만 (숫자는 status.json 의 roles 로 채움). id 는 캐릭터(PERSONA) 이름표, role 은 실제 역할
 const W=[
- {id:"plan",d:"plan",k:"기획",nick:"꼼꼼한 장구",who:"ai",run:"Claude Code",st:"run",now:"12월 1주 편성표",p:70,today:1,total:9,chars:18420,mb:.4,stage:0,out:["편성표"],since:"11/12",hours:31,days:13,grade:"A",prop:"paper",desk:0},
- {id:"res",d:"info",k:"리서치",nick:"부지런한 해금",who:"ai",run:"Claude Code",st:"run",now:"가야금 산조 유래 자료",p:45,today:3,total:41,chars:96310,mb:2.1,stage:0,out:["자료 메모"],since:"11/12",hours:58,days:14,grade:"A",prop:"books",desk:1},
- {id:"wri",d:"info",k:"원고",nick:"묵묵한 대금",who:"ai",run:"Claude Code",st:"run",now:"산조 해설 블로그 원고",p:62,today:2,total:37,chars:142880,mb:3.4,stage:0,out:["블로그","카드뉴스","스레드"],since:"11/12",hours:64,days:14,grade:"B",prop:"laptop",desk:2},
- {id:"ana",d:"ops",k:"분석",nick:"차분한 편경",who:"ai",run:"Python",st:"run",now:"주간 리포트 집계",p:30,today:1,total:7,chars:8240,mb:.9,stage:0,out:["리포트"],since:"11/14",hours:12,days:11,grade:"A",prop:"chart",desk:3},
- {id:"lyr",d:"music",k:"작사",nick:"수줍은 단소",who:"ai",run:"Claude Code",st:"idle",now:"다음 곡 배정 기다림",p:0,today:0,total:4,chars:3120,mb:.1,stage:0,out:["가사"],since:"11/18",hours:5,days:6,grade:"B",prop:"paper",desk:4},
- {id:"cmp",d:"music",k:"작곡",nick:"공방 주인",who:"shin",run:"사람",st:"run",now:"'달빛 타령' 스케치",p:35,today:0,total:3,chars:0,mb:48,stage:0,out:["MIDI","녹음"],since:"11/12",hours:22,days:8,grade:"S",prop:"gayageum",desk:5},
- {id:"arr",d:"music",k:"편곡",nick:"공방 주인",who:"shin",run:"사람",st:"wait",now:"아리랑 가야금 편곡 확인",p:80,today:1,total:5,chars:0,mb:31,stage:1,out:["편곡안"],since:"11/12",hours:14,days:6,grade:"S",prop:"gayageum",desk:6,ghost:true},
- {id:"scr",d:"music",k:"악보",nick:"반듯한 가야금",who:"ai",run:"Python",st:"run",now:"아리랑 정간보 생성",p:55,today:2,total:12,chars:0,mb:6.2,stage:0,out:["오선보","정간보","PDF"],since:"11/15",hours:19,days:10,grade:"A",prop:"score",desk:7},
- {id:"vid",d:"video",k:"영상",nick:"날랜 꽹과리",who:"ai",run:"Python",st:"dep",now:"악보 완성 기다림",p:0,today:0,total:8,chars:0,mb:412,stage:0,out:["릴스","쇼츠"],since:"11/16",hours:26,days:9,grade:"B",prop:"camera",desk:8},
- {id:"dir",d:"video",k:"연출",nick:"총괄 · 최종 승인",who:"jong",run:"사람",st:"idle",now:"릴스 톤 가이드 완료",p:100,today:1,total:6,chars:2210,mb:.2,stage:3,out:["연출 가이드"],since:"11/12",hours:9,days:5,grade:"A",prop:"paper",desk:9,ghost:true},
- {id:"shp",d:"shop",k:"상품",nick:"야무진 소고",who:"ai",run:"Claude Code",st:"wait",waitFor:"jong",now:"아리랑 악보집 상세페이지",p:60,today:0,total:2,chars:5410,mb:3.8,stage:1,out:["상세페이지"],since:"11/22",hours:4,days:3,grade:"B",prop:"box",desk:10},
- {id:"ord",d:"shop",k:"주문·문의",nick:"총괄 · 최종 승인",who:"jong",run:"사람",st:"idle",now:"새 문의 없음",p:0,today:0,total:0,chars:0,mb:0,stage:0,out:["응대"],since:"-",hours:0,days:0,grade:"-",prop:"box",desk:11,ghost:true},
- {id:"pkg",d:"ship",k:"포장",nick:"싹싹한 아쟁",who:"ai",run:"Claude Code",st:"run",now:"카드뉴스 6장 변환",p:40,today:4,total:52,chars:61200,mb:24,stage:0,out:["카드뉴스","스레드"],since:"11/13",hours:47,days:13,grade:"A",prop:"laptop",desk:12},
- {id:"rev",d:"ship",k:"검수",nick:"총괄 · 최종 승인",who:"jong",run:"사람",st:"run",now:"승인 대기 3건 확인 중",p:20,today:5,total:58,chars:0,mb:0,stage:1,out:["승인"],since:"11/12",hours:16,days:14,grade:"A",prop:"stamp",desk:13},
- {id:"pub",d:"ship",k:"게시",nick:"깔끔한 피리",who:"ai",run:"API·브라우저",st:"idle",now:"다음 게시 19:00 인스타",p:0,today:3,total:49,chars:0,mb:0,stage:3,out:["인스타","스레드","블로그"],since:"11/20",hours:3,days:6,grade:"A",prop:"laptop",desk:14}];
+ {id:"plan",role:"plan",d:"plan",k:"기획",nick:"주제 고르기",who:"ai",run:"GitHub · topics.txt",out:["다음 주제"],desk:0,stage:0},
+ {id:"res",role:"check",d:"info",k:"출처 검사",nick:"주소가 열리는지 확인",who:"ai",run:"GitHub · Python",out:["출처 2개 이상"],desk:1,stage:0},
+ {id:"wri",role:"draft",d:"info",k:"자료조사·초안",nick:"웹 자료로 글쓰기",who:"ai",run:"Claude Code",out:["블로그","스레드","캡션"],desk:2,stage:0},
+ {id:"ana",role:"refs",d:"design",k:"레퍼런스 수집",nick:"스타일·공공 사진·형 폴더",who:"ai",run:"Claude Code",out:["스타일 메모","공공 사진"],desk:5,stage:0},
+ {id:"pkg",role:"design",d:"design",k:"디자인",nick:"캐러셀·블로그 이미지",who:"ai",run:"GitHub · 브라우저",out:["캐러셀","블로그 대표","스레드 이미지"],desk:7,stage:0},
+ {id:"rev",role:"approve",d:"ship",k:"승인",nick:"총괄 · 최종 승인",who:"jong",run:"사람 · 텔레그램",out:["승인","보류"],desk:13,stage:2},
+ {id:"pub",role:"threads",d:"ship",k:"스레드 게시",nick:"이미지와 함께",who:"ai",run:"GitHub · API",out:["스레드"],desk:12,stage:3},
+ {id:"scr",role:"instagram",d:"ship",k:"인스타 게시",nick:"캐러셀로",who:"ai",run:"GitHub · API",out:["인스타"],desk:14,stage:3},
+ {id:"shp",role:"naver",d:"ship",k:"블로그 게시",nick:"형 PC에서 비공개로",who:"ai",run:"형 PC · 크롬",out:["네이버 블로그"],desk:10,stage:3}];
+W.forEach(w=>Object.assign(w,{st:"idle",now:"기록 불러오는 중",p:0,today:0,total:0,unit:"건",chars:0,mb:0}));
 W.forEach((w,i)=>w.no=i+1);
 // 일꾼마다 이름·외모·성격·습관·말버릇
 const PERSONA={
@@ -325,7 +321,7 @@ function drawSprite(f,x,top,ps,o){
  if(o.dep){for(let k=0;k<3;k++)f(x+k*3,top-8,2,2,k<=o.depK?"#6aa3d8":"#2a3550")}
 }
 
-const ST={run:["작업중","s-run"],wait:["사람 확인 대기","s-wait"],dep:["앞 단계 기다림","s-dep"],idle:["쉬는 중","s-idle"]};
+const ST={run:["할 일 있음","s-run"],wait:["확인 필요","s-wait"],dep:["PC 대기","s-dep"],idle:["대기","s-idle"]};
 const GRADE={S:"#efc35a",A:"#7cc79a",B:"#6aa3d8","-":"#5f697a"};
 let week={done:17,goal:21},filter="all",feed=[];
 const fmt=n=>n.toLocaleString("ko-KR");
@@ -348,15 +344,14 @@ function card(w){
  const barC=w.st==="wait"?"var(--wait)":w.st==="dep"?"var(--blue)":"var(--go)";
  return `<article class="w ${off?"off":""}">
   <div class="r1"><span class="no">${w.no}호</span><span class="st ${ST[w.st][1]}">${ST[w.st][0]}</span></div>
-  <div class="nums"><div><b>${fmt(w.total)}</b><small>누적 건</small></div><div class="rt"><b>${w.chars?fmt(w.chars):fmt(w.mb)}</b><small>${w.chars?"누적 자 · "+w.mb+"MB":"누적 MB"}</small></div></div>
+  <div class="nums"><div><b>${fmt(w.total)}</b><small>누적 ${esc(w.unit)}</small></div><div class="rt"><b>${fmt(w.today)}</b><small>오늘 ${esc(w.unit)}</small></div></div>
   ${mini(w)}
-  <div class="nm"><b>${esc(w.name)}</b><span style="color:var(--mute);font-size:12.5px">${esc(w.nick)}</span></div><div class="nm"><span class="tg" style="color:${dep[1]};border-color:${dep[1]}">${dep[0]}</span><span class="tg" style="color:var(--mute);border-color:var(--line)">${esc(w.run)}</span></div>
+  <div class="nm"><b>${esc(w.name)}</b><span style="color:var(--mute);font-size:12.5px">${esc(w.k)}</span></div><div class="nm"><span class="tg" style="color:${dep[1]};border-color:${dep[1]}">${dep[0]}</span><span class="tg" style="color:var(--mute);border-color:var(--line)">${esc(w.run)}</span></div>
   <div class="job"><b>${esc(w.k)}</b> — ${esc(w.now)}</div>
   <div class="bar"><span style="width:${w.st==="idle"?0:w.p}%;background:${barC}"></span></div>
   <div class="chips">${STAGES.map((s,j)=>j<w.stage?`<em class="done">✓${s}</em>`:j===w.stage&&w.st!=="idle"?`<em class="cur">${s}</em>`:`<em>${s}</em>`).join("")}</div>
   <div class="chips">${w.out.map(o=>`<em class="out">${esc(o)}</em>`).join("")}</div>
-  <div class="ln">오늘 ${w.today}건${w.chars?" · "+fmt(Math.round(w.chars/Math.max(w.total,1)*w.today))+"자":""} · ${(w.mb/Math.max(w.total,1)*w.today).toFixed(1)}MB</div>
-  <div class="ft"><span class="gr" style="background:${GRADE[w.grade]}">${w.grade}</span><span>가동 ${w.since}${w.days?` (${w.days}일째)`:""} · 일한 시간 ${w.hours}시간 · ${who.n}</span></div>
+  <div class="ft"><span>${esc(w.nick)}</span><span>${w.link?`<a href="${esc(w.link)}" target="_blank" rel="noopener" style="color:var(--blue)">최근 글 ↗</a>`:esc(who.n)}</span></div>
  </article>`;
 }
 const fEl=document.getElementById("filters");
@@ -373,15 +368,15 @@ function renderSum(){
 }
 renderCards();renderSum();
 const d0=new Date();
-document.getElementById("clock").textContent=`형 PC에서 돌아가는 일꾼 ${W.length}명 · ${d0.getMonth()+1}월 ${d0.getDate()}일 ${hhmm()} 기준`;
+document.getElementById("clock").textContent=`실제로 돌아가는 일 ${W.length}가지`;
 
 /* ---------- 작업실 탭 ---------- */
 const RW=440,RH=272;
 // 책상 위치 (좌상단). 번호는 일꾼 데이터의 desk와 같음
 const DESK=[[28,64],[84,64],[116,64],[176,64],[28,132],[92,132],[116,132],[160,132],[50,200],[64,200],[154,200],[168,200],[236,64],[236,132],[236,200]];
-const GHOST=new Set([6,9,11]);
-const ROLES={5:"작곡 · 편곡",13:"검수 · 연출 · 주문"};
-const ZONES=[["편성국",16,44,44,48,"#6aa3d8"],["정보팀",72,44,76,48,"#efc35a"],["운영",164,44,44,48,"#8b95a6"],["음악팀",16,112,192,48,"#e8746f"],["영상팀",16,180,84,48,"#e8a96f"],["커머스",116,180,92,48,"#d9736f"],["출고 라인",224,44,56,184,"#cfd3da"]];
+const GHOST=new Set([3,4,6,8,9,11]);
+const ROLES={13:"최종 승인"};
+const ZONES=[["편성국",16,44,44,48,"#6aa3d8"],["정보팀",72,44,76,48,"#efc35a"],["디자인팀",72,112,136,48,"#c99be0"],["형 PC",116,180,92,48,"#7cc79a"],["출고 라인",224,44,56,184,"#cfd3da"]];
 const TEA=[[348,190],[392,190],[348,214],[392,214],[336,202],[404,202]];
 const DROP=[262,80];
 const BAR=[[342,166],[356,166],[370,166]];
@@ -403,6 +398,7 @@ function target(a){
  if(a.coffee==="go"||a.coffee==="brew"){const q=ACT.filter(b=>b.coffee==="go"||b.coffee==="brew");return BAR[Math.max(0,q.indexOf(a))%BAR.length]}
  if(a.brk>performance.now()){a.spot="tea";if(a.tea===null)a.tea=freeTea();if(a.tea>=0)return TEA[a.tea];a.brk=0;a.tea=null}
  if(w.who!=="ai")return seatOf(w.desk);
+ if(w.st==="idle"){a.spot=null;a.tea=null;return seatOf(w.desk)}   // 실제 대기: 자기 자리에서 쉼
  if(w.st==="idle"){
   const hb=w.ps.habit;
   if(hb==="desk"){a.spot=null;a.tea=null;return seatOf(w.desk)}
@@ -675,12 +671,7 @@ function bubbles(t,proj){
  });
 }
 function say(a,txt,ms=3600){a.say=txt;a.sayUntil=performance.now()+ms}
-function workLine(w){
- if(w.st==="run")return w.who==="ai"?`${w.now} · ${w.p}%`:w.now;
- if(w.st==="wait")return `${w.waitFor==="jong"?"종인":"신뚱"}님, 확인 부탁해요`;
- if(w.st==="dep")return w.id==="vid"?"새봄 악보 기다리는 중":"앞 단계 기다리는 중";
- return w.id==="pub"?w.now:"다음 작업 배정 대기";
-}
+function workLine(w){return w.now}   // 실제 기록에서 온 문장만
 function chatter(){
  const now=performance.now(),free=ACT.filter(a=>(!a.say||now>a.sayUntil)&&!a.path.length);
  if(ACT.filter(a=>a.say&&now<a.sayUntil).length>=2||rnd()<.35)return;
@@ -709,35 +700,17 @@ function showPick(){
  const w=sel.w;el.innerHTML=`<b>${esc(w.name)}</b> <span class="lab">${esc(w.nick)}</span><div class="lab" style="margin:2px 0 4px">${esc(w.ps.trait)}</div> <span class="st ${ST[w.st][1]}">${ST[w.st][0]}</span><div class="lab" style="margin-top:4px">${esc(DEPTS[w.d][0])} · ${esc(w.k)} · ${esc(w.run)}</div><div style="margin-top:6px">${esc(w.now)}</div><div class="lab">오늘 ${w.today}건 · 누적 ${fmt(w.total)}건 · 진행 ${w.st==="idle"?0:w.p}%</div>`;
 }
 function log(msg){feed.unshift(`<li><small>${hhmm()}</small>${esc(msg)}</li>`);feed=feed.slice(0,30);document.getElementById("feed").innerHTML=feed.join("")}
-showPick();log("검수 대기 3건이 종인 자리에 쌓임");log("새봄 · 아리랑 정간보 생성 시작");log("가람 · 산조 해설 원고 작성 시작");
+showPick();
 
 /* ---------- 예시 데이터 움직이기 ---------- */
 let seed=7;const rnd=()=>(seed=seed*16807%2147483647)/2147483647;
 function tick(){
- W.forEach(w=>{
-  if(w.st!=="run"||w.ghost)return;
-  {const a=ACT.find(b=>b.w===w);if(a&&(a.coffee||a.brk>performance.now()))return}
-  w.p=Math.min(100,w.p+Math.round(5+rnd()*10));
-  if(w.p>=100){
-   w.today++;w.total++;w.p=0;w.chars+=w.chars?Math.round(1500+rnd()*2500):0;
-   const a=ACT.find(b=>b.w===w);
-   if(a&&w.who==="ai"&&w.d!=="ship"){a.carry=true;say(a,`${w.k} 완성! 포장대로`);route(a,DROP[0],DROP[1]);log(`${w.name}(${w.k}) · 결과물 완성 → 포장대로`)}
-   else log(`${w.name}(${w.k}) · 1건 완료`);
-   if(w.id==="scr"){const v=W.find(x=>x.id==="vid");v.st="run";v.now="아리랑 악보 스크롤 영상";v.p=5;log("도윤 · 새봄의 악보를 받아 영상 작업 시작")}
-   if(w.id==="vid"){w.st="dep";w.now="다음 악보 기다림"}
-   if(w.id==="pkg"){const r=W.find(x=>x.id==="rev");r.now=`승인 대기 ${2+Math.floor(rnd()*3)}건 확인 중`}
-   if(w.id==="rev"&&rnd()<.6){week.done=Math.min(week.goal,week.done+1);{const j=ACT.find(b=>b.w.id==="rev");if(j)say(j,"승인! 발행 예약으로")}const p=W.find(x=>x.id==="pub");p.today++;p.total++;log("온새 · 승인된 게시물 예약 완료")}
-  }
- });
  // 가끔 상태 전환: 쉬던 일꾼이 일 시작, 줄 서던 일꾼 승인
- {const now=performance.now(),cand=ACT.filter(a=>!a.path.length&&!a.carry&&!a.coffee&&!(a.cup>now)&&!(a.brk>now)&&a.w.st==="run");
+ {const now=performance.now(),cand=ACT.filter(a=>!a.path.length&&!a.carry&&!a.coffee&&!(a.cup>now)&&!(a.brk>now)&&(a.w.st==="run"||a.w.st==="idle"));
   const onBrk=ACT.filter(a=>a.brk>now||a.coffee).length;
   if(cand.length>=3&&onBrk===0&&rnd()<.12){const n=2+Math.floor(rnd()*2),grp=[];const pool=[...cand];while(grp.length<n&&pool.length)grp.push(pool.splice(Math.floor(rnd()*pool.length),1)[0]);
    grp.forEach((a,i)=>{a.coffee="go";a.wantBrk=true;if(!i)say(a,"다같이 커피 한잔 할까요?")});log(`티타임 · ${grp.map(a=>a.w.name).join(", ")}`)}
-  else{const ai=cand.filter(a=>a.w.who==="ai");if(ai.length&&onBrk<4&&rnd()<.45){const a=ai[Math.floor(rnd()*ai.length)];a.coffee="go";a.wantBrk=rnd()<.6;if(rnd()<.4)say(a,"커피 한잔 하고 올게요");log(`${a.w.name} · 커피 바로`)}}}
- if(rnd()<.25){const l=W.find(x=>x.id==="lyr");if(l.st==="idle"){l.st="run";l.now="'달빛 타령' 가사 초안";l.p=5;log("보라 · 고양이 곁에서 일어나 가사 작업 시작")}else if(l.p===0){l.st="idle";l.now="다음 곡 배정 기다림";log("보라 · 고양이 쓰다듬으러 감")}}
- if(rnd()<.2){const s=W.find(x=>x.id==="shp");if(s.st==="wait"){s.st="run";s.stage=2;s.now="승인받은 상세페이지 마무리";log("종인 · 상품 상세페이지 승인");{const j=ACT.find(b=>b.w.id==="rev");if(j)say(j,"상세페이지 승인!")}}else if(s.p===0||s.p>85){s.st="wait";s.stage=1;s.now="악보집 상세페이지 확인 요청";log("하랑 · 종인 자리에 확인 요청하러 감")}}
- if(rnd()<.15){const a=W.find(x=>x.id==="ana");if(a.st==="run"&&a.p<15){a.st="idle";a.now="집계 끝, 휴식";log("누리 · 칠판 앞으로")}else if(a.st==="idle"){a.st="run";a.now="주간 리포트 집계";a.p=5}}
+  else{const ai=cand.filter(a=>a.w.who==="ai");if(ai.length&&onBrk<3&&rnd()<.3){const a=ai[Math.floor(rnd()*ai.length)];a.coffee="go";a.wantBrk=rnd()<.6;if(rnd()<.4)say(a,"커피 한잔 하고 올게요");log(`${a.w.name} · 커피 바로`)}}}
  plan();renderCards();renderSum();if(sel)showPick();
 }
 if(!reduce)setInterval(tick,3200);
@@ -846,6 +819,17 @@ function showTab(){
  if(h==="office")requestAnimationFrame(()=>{sizeRoom();frame(performance.now(),true)});
 }
 addEventListener("hashchange",showTab);showTab();
+window.applyRoles=function applyRoles(roles,posts,STATE){
+  if(!roles)return;
+  const map={wait:"run",err:"wait",idle:"idle"};
+  W.forEach(w=>{const r=roles[w.role];if(!r)return;
+    w.total=r.total||0;w.today=r.today||0;w.unit=r.unit||"건";w.now=r.now||"";w.link=/^https:\/\//.test(r.link||"")?r.link:null;
+    w.st=w.role==="naver"&&r.st==="wait"?"dep":(map[r.st]||"idle");if(w.st==="wait")w.waitFor="jong";w.p=w.st==="run"?50:0});
+  plan();
+  renderCards();if(sel)showPick();
+  if(!applyRoles.logged&&posts&&posts.length){applyRoles.logged=true;
+    posts.slice(0,8).reverse().forEach(p=>log(`${(p.created||"").slice(5,16).replace("T"," ")} · ${p.title} — ${STATE[p.state]||p.state}`))}
+}
 }
 </script>
 <script>
@@ -887,6 +871,7 @@ function render(d){
     <div class="m">${esc(dt)} · ${p.chars?esc(p.chars.toLocaleString())+"자":""}${p.sources?" · 출처 "+esc(p.sources)+"개":""}</div>
     <div class="chs">${["threads","instagram","naver"].map(k=>chip(k,(p.channels||{})[k])).join("")}</div></li>`}).join("")
     :`<li class="empty">아직 글이 없어. 다음 자동 초안을 기다리는 중.</li>`;
+  if(window.applyRoles)window.applyRoles(d.roles,posts,STATE);
 }
 function fail(){
   document.getElementById("liveBadge").innerHTML=`<span class="badge b-demo">예시 데이터</span> <span style="font-size:12px">실제 기록을 못 불러왔어 (status.json)</span>`;
