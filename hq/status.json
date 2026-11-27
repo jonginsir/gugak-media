@@ -1,10 +1,14 @@
 {
- "generated": "2026-11-27T12:30",
- "next_draft": "11/30 (월) 09:00",
+ "generated": "2026-11-27T12:45",
+ "next_draft": "11/28 (토) 09:00",
  "draft_days": [
   "월",
+  "화",
   "수",
-  "금"
+  "목",
+  "금",
+  "토",
+  "일"
  ],
  "topics": [
   "장단이란 무엇인가: 세마치와 굿거리",
@@ -17,7 +21,7 @@
  "counts": {
   "published": 1,
   "week": 1,
-  "week_target": 3,
+  "week_target": 7,
   "pending": 3,
   "problems": 0,
   "chars": 1399
