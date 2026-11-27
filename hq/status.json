@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T10:17",
+ "generated": "2026-11-27T10:30",
  "next_draft": "11/30 (월) 09:00",
  "draft_days": [
   "월",
@@ -7,22 +7,52 @@
   "금"
  ],
  "topics": [
-  "대금 소리는 왜 떨리듯 울릴까",
   "장단이란 무엇인가: 세마치와 굿거리",
   "판소리 다섯 바탕 한눈에 보기",
   "정간보 읽는 법",
-  "가야금 12현과 25현의 차이"
+  "가야금 12현과 25현의 차이",
+  "지역마다 다른 아리랑"
  ],
- "topics_left": 9,
+ "topics_left": 8,
  "counts": {
   "published": 1,
   "week": 1,
   "week_target": 3,
-  "pending": 2,
+  "pending": 3,
   "problems": 0,
   "chars": 1399
  },
  "posts": [
+  {
+   "id": "20261127-1017-대금-소리는-왜-떨리듯-울릴까",
+   "title": "대금 소리가 떨리는 진짜 이유",
+   "topic": "대금 소리는 왜 떨리듯 울릴까",
+   "state": "sent",
+   "created": "2026-11-27T10:17:16",
+   "updated": null,
+   "chars": 1336,
+   "sources": 4,
+   "approved": false,
+   "design": {
+    "ok": true,
+    "slides": 6,
+    "palette": "한지와 먹",
+    "refs": 3,
+    "photo": true
+   },
+   "channels": {
+    "threads": {
+     "ok": false,
+     "link": null,
+     "error": null
+    },
+    "instagram": {
+     "ok": false,
+     "link": null,
+     "error": null
+    }
+   }
+  },
   {
    "id": "20261126-2311-거문고는-왜-선비의-악기였을까",
    "title": "거문고, 왜 선비의 악기였을까",
@@ -122,36 +152,36 @@
  ],
  "roles": {
   "plan": {
-   "total": 3,
-   "today": 0,
+   "total": 4,
+   "today": 1,
    "unit": "건",
-   "now": "다음 주제: 대금 소리는 왜 떨리듯 울릴까",
+   "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
   },
   "draft": {
-   "total": 4038,
-   "today": 0,
+   "total": 5374,
+   "today": 1336,
    "unit": "자",
-   "now": "최근: 거문고, 왜 선비의 악기였을까",
+   "now": "최근: 대금 소리가 떨리는 진짜 이유",
    "st": "idle"
   },
   "check": {
-   "total": 10,
-   "today": 0,
+   "total": 14,
+   "today": 4,
    "unit": "개",
    "now": "최근 출처 4개 통과",
    "st": "idle"
   },
   "refs": {
-   "total": 7,
-   "today": 0,
+   "total": 11,
+   "today": 4,
    "unit": "건",
    "now": "최근 참고 3건 · 공공 사진 1장",
    "st": "idle"
   },
   "design": {
-   "total": 12,
-   "today": 0,
+   "total": 18,
+   "today": 6,
    "unit": "장",
    "now": "최근 한지와 먹 6장",
    "st": "idle"
@@ -160,7 +190,7 @@
    "total": 1,
    "today": 0,
    "unit": "건",
-   "now": "승인 기다리는 초안 2건",
+   "now": "승인 기다리는 초안 3건",
    "st": "wait"
   },
   "chief": {
