@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T20:45",
+ "generated": "2026-11-27T21:00",
  "next_draft": "11/28 (토) 09:00",
  "draft_days": [
   "월",
@@ -202,6 +202,13 @@
    "today": 16,
    "unit": "건",
    "now": "오늘 점검 16건 · 형 확인 6건",
+   "st": "wait"
+  },
+  "arrange": {
+   "total": 12,
+   "today": 1,
+   "unit": "개",
+   "now": "작곡가 확인 대기 1건 · 징글벨 국악 캐럴",
    "st": "wait"
   },
   "threads": {
