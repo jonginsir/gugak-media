@@ -212,7 +212,7 @@ a.ch:hover{border-color:var(--ink)}
 
 <script>
 {
-const DEPTS={plan:["장단실","#6aa3d8"],info:["서고","#efc35a"],design:["화실","#c99be0"],ship:["무대","#e8746f"],home:["사랑방","#7cc79a"],yul:["율방","#e0a458"]};
+const DEPTS={plan:["장단실","#6aa3d8"],info:["서고","#efc35a"],design:["화실","#c99be0"],ship:["무대","#e8746f"],home:["사랑방","#7cc79a"],yul:["율방","#e0a458"],hwan:["환등방","#7fb6c9"]};
 const WHO={ai:{n:"AI",shirt:"#4f7fae",hair:"#2b2f3a"},shin:{n:"신뚱",shirt:"#c9514c",hair:"#1b1717"},jong:{n:"종인",shirt:"#3e4655",hair:"#1f1f22"}};
 const STAGES=["초안","검수","승인","게시"];
 const HAIR=["#2b2f3a","#5a3b28","#1f2430","#7a4e2d","#38302a","#2d2a3f"];
@@ -225,11 +225,11 @@ const W=[
  {id:"ana",role:"refs",d:"design",k:"레퍼런스 수집",nick:"스타일·공공 사진·형 폴더",who:"ai",run:"Claude Code",out:["스타일 메모","공공 사진"],desk:5,stage:0},
  {id:"pkg",role:"design",d:"design",k:"디자인",nick:"캐러셀·블로그 이미지",who:"ai",run:"GitHub · 브라우저",out:["캐러셀","블로그 대표","스레드 이미지"],desk:7,stage:0},
  {id:"rev",role:"approve",d:"ship",k:"승인",nick:"총괄 · 최종 승인",who:"jong",run:"사람 · 텔레그램",out:["승인","보류"],desk:13,stage:2},
- {id:"pub",role:"threads",d:"ship",k:"스레드 게시",nick:"이미지와 함께",who:"ai",run:"GitHub · API",out:["스레드"],desk:12,stage:3},
- {id:"scr",role:"instagram",d:"ship",k:"인스타 게시",nick:"캐러셀로",who:"ai",run:"GitHub · API",out:["인스타"],desk:14,stage:3},
+ {id:"pub",role:"sns",d:"ship",k:"스레드·인스타 게시",nick:"이미지·캐러셀로",who:"ai",run:"GitHub · API",out:["스레드","인스타"],desk:12,stage:3},
  {id:"shp",role:"naver",d:"home",k:"블로그 게시",nick:"형 PC에서 비공개로",who:"ai",run:"형 PC · 크롬",out:["네이버 블로그"],desk:10,stage:3},
  {id:"chf",role:"chief",d:"plan",k:"비서실장",nick:"전 팀 점검 · 아침 보고",who:"ai",run:"GitHub · 매일 08:37",out:["아침 보고","노션 정리","멈춘 일 다시 실행"],desk:3,stage:0},
- {id:"cmp",role:"arrange",d:"yul",k:"편곡·연주",nick:"구음표 · 렌더 · 작곡가 확인",who:"shin",run:"Claude Code · reels/",out:["구음표","음원 2안"],desk:8,stage:0}];
+ {id:"cmp",role:"arrange",d:"yul",k:"편곡·연주",nick:"구음표 · 렌더 · 작곡가 확인",who:"shin",run:"Claude Code · reels/",out:["구음표","음원 2안"],desk:8,stage:0},
+ {id:"vid",role:"video",d:"hwan",k:"영상 연출",nick:"컷 스크립트 · 시험 컷 · AI 영상",who:"ai",run:"Claude Code · 힉스필드",out:["컷 스크립트","시험 컷"],desk:4,stage:0}];
 W.forEach(w=>Object.assign(w,{st:"idle",now:"기록 불러오는 중",p:0,today:0,total:0,unit:"건",chars:0,mb:0}));
 W.forEach((w,i)=>w.no=i+1);
 // 일꾼마다 이름·외모·성격·습관·말버릇
@@ -378,9 +378,9 @@ document.getElementById("clock").textContent=`실제로 돌아가는 일 ${W.len
 const RW=440,RH=272;
 // 책상 위치 (좌상단). 번호는 일꾼 데이터의 desk와 같음
 const DESK=[[28,64],[84,64],[116,64],[176,64],[28,132],[92,132],[116,132],[160,132],[50,200],[64,200],[154,200],[168,200],[236,64],[236,132],[236,200]];
-const GHOST=new Set([4,6,9,11]);
+const GHOST=new Set([6,9,11,14]);
 const ROLES={13:"최종 승인"};
-const ZONES=[["장단실",16,44,44,48,"#6aa3d8"],["서고",72,44,76,48,"#efc35a"],["화실",72,112,136,48,"#c99be0"],["사랑방",116,180,92,48,"#7cc79a"],["무대",224,44,56,184,"#e8746f"],["율방",16,180,92,48,"#e0a458"]];
+const ZONES=[["장단실",16,44,44,48,"#6aa3d8"],["서고",72,44,76,48,"#efc35a"],["화실",72,112,136,48,"#c99be0"],["사랑방",116,180,92,48,"#7cc79a"],["무대",224,44,56,184,"#e8746f"],["율방",16,180,92,48,"#e0a458"],["환등방",16,112,48,48,"#7fb6c9"]];
 const TEA=[[348,190],[392,190],[348,214],[392,214],[336,202],[404,202]];
 const DROP=[262,80];
 const BAR=[[342,166],[356,166],[370,166]];
