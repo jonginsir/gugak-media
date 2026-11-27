@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T23:45",
+ "generated": "2026-11-28T00:00",
  "next_draft": "11/28 (토) 09:00",
  "draft_days": [
   "월",
@@ -157,35 +157,35 @@
  "roles": {
   "plan": {
    "total": 4,
-   "today": 1,
+   "today": 0,
    "unit": "건",
    "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
   },
   "draft": {
    "total": 5374,
-   "today": 1336,
+   "today": 0,
    "unit": "자",
    "now": "최근: 대금 소리가 떨리는 진짜 이유",
    "st": "idle"
   },
   "check": {
    "total": 14,
-   "today": 4,
+   "today": 0,
    "unit": "개",
    "now": "최근 출처 4개 통과",
    "st": "idle"
   },
   "refs": {
    "total": 11,
-   "today": 4,
+   "today": 0,
    "unit": "건",
    "now": "최근 참고 3건 · 공공 사진 1장",
    "st": "idle"
   },
   "design": {
    "total": 18,
-   "today": 6,
+   "today": 0,
    "unit": "장",
    "now": "최근 한지와 먹 6장",
    "st": "idle"
@@ -199,10 +199,10 @@
   },
   "chief": {
    "total": 1,
-   "today": 16,
-   "unit": "건",
-   "now": "오늘 점검 16건 · 형 확인 6건",
-   "st": "wait"
+   "today": 0,
+   "unit": "일",
+   "now": "최근 점검 2026-11-27",
+   "st": "idle"
   },
   "arrange": {
    "total": 12,
