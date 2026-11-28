@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T11:30",
+ "generated": "2026-11-28T11:31",
  "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
@@ -22,11 +22,41 @@
   "published": 2,
   "week": 2,
   "week_target": 7,
-  "pending": 3,
+  "pending": 4,
   "problems": 0,
   "chars": 1399
  },
  "posts": [
+  {
+   "id": "20261128-1130-좀비추격-RUN",
+   "title": "RUN · 국악기로 그린 좀비 추격 (1분 릴스)",
+   "topic": "RUN · 국악기로 그린 좀비 추격 (1분 릴스)",
+   "state": "sent",
+   "created": "2026-11-28T11:30:47",
+   "updated": null,
+   "chars": 0,
+   "sources": 0,
+   "approved": false,
+   "design": {
+    "ok": false,
+    "slides": 0,
+    "palette": null,
+    "refs": 0,
+    "photo": false
+   },
+   "channels": {
+    "threads": {
+     "ok": false,
+     "link": null,
+     "error": null
+    },
+    "instagram": {
+     "ok": false,
+     "link": null,
+     "error": null
+    }
+   }
+  },
   {
    "id": "20261128-0200-숨비소리-릴스-숨",
    "title": "숨비소리 · 숨 (1분 릴스)",
@@ -192,8 +222,8 @@
  ],
  "roles": {
   "plan": {
-   "total": 5,
-   "today": 1,
+   "total": 6,
+   "today": 2,
    "unit": "건",
    "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
@@ -202,7 +232,7 @@
    "total": 5374,
    "today": 0,
    "unit": "자",
-   "now": "최근: 숨비소리 · 숨 (1분 릴스)",
+   "now": "최근: RUN · 국악기로 그린 좀비 추격 (1분 릴스)",
    "st": "idle"
   },
   "check": {
@@ -230,7 +260,7 @@
    "total": 2,
    "today": 1,
    "unit": "건",
-   "now": "승인 기다리는 초안 3건",
+   "now": "승인 기다리는 초안 4건",
    "st": "wait"
   },
   "chief": {
