@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T17:45",
+ "generated": "2026-11-28T17:58",
  "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
@@ -19,14 +19,44 @@
  ],
  "topics_left": 8,
  "counts": {
-  "published": 2,
-  "week": 2,
+  "published": 3,
+  "week": 3,
   "week_target": 7,
   "pending": 5,
   "problems": 1,
   "chars": 1399
  },
  "posts": [
+  {
+   "id": "20261128-1800-왕벌의비행",
+   "title": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
+   "topic": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
+   "state": "sent",
+   "created": "2026-11-28T17:55:17",
+   "updated": null,
+   "chars": 0,
+   "sources": 0,
+   "approved": false,
+   "design": {
+    "ok": false,
+    "slides": 0,
+    "palette": null,
+    "refs": 0,
+    "photo": false
+   },
+   "channels": {
+    "threads": {
+     "ok": false,
+     "link": null,
+     "error": null
+    },
+    "instagram": {
+     "ok": false,
+     "link": null,
+     "error": null
+    }
+   }
+  },
   {
    "id": "20261128-1716-국악-소식",
    "title": "국악 소식 11.28 (종류별(참가 → 관람))",
@@ -91,12 +121,12 @@
    "id": "20261128-1420-신명",
    "title": "신명 · 현과 북의 그루브 (1분 릴스)",
    "topic": "신명 · 현과 북의 그루브 (1분 릴스)",
-   "state": "sent",
+   "state": "published",
    "created": "2026-11-28T14:20:05",
-   "updated": null,
+   "updated": "2026-11-28T17:58:12",
    "chars": 0,
    "sources": 0,
-   "approved": false,
+   "approved": true,
    "design": {
     "ok": false,
     "slides": 0,
@@ -106,14 +136,20 @@
    },
    "channels": {
     "threads": {
-     "ok": false,
-     "link": null,
+     "ok": true,
+     "link": "https://www.threads.com/@composer.gugak/post/DgR4IQBBlwL",
      "error": null
     },
     "instagram": {
+     "ok": true,
+     "link": "https://www.instagram.com/reel/DgR4MPwNU8H/",
+     "error": null
+    },
+    "naver": {
      "ok": false,
      "link": null,
-     "error": null
+     "error": null,
+     "waiting": true
     }
    }
   },
@@ -348,8 +384,8 @@
  ],
  "roles": {
   "plan": {
-   "total": 10,
-   "today": 6,
+   "total": 11,
+   "today": 7,
    "unit": "건",
    "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
@@ -358,33 +394,33 @@
    "total": 7146,
    "today": 1772,
    "unit": "자",
-   "now": "최근: 국악 소식 11.28 (종류별(참가 → 관람))",
+   "now": "최근: 왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
    "st": "idle"
   },
   "check": {
    "total": 26,
    "today": 12,
    "unit": "개",
-   "now": "최근 출처 6개 통과",
+   "now": "최근 출처 0개 통과",
    "st": "idle"
   },
   "refs": {
    "total": 17,
    "today": 6,
    "unit": "건",
-   "now": "최근 참고 3건",
+   "now": "최근 참고 0건",
    "st": "idle"
   },
   "design": {
    "total": 30,
    "today": 12,
    "unit": "장",
-   "now": "최근 쪽빛 밤 6장",
+   "now": "기본 카드로 진행",
    "st": "idle"
   },
   "approve": {
-   "total": 3,
-   "today": 2,
+   "total": 4,
+   "today": 3,
    "unit": "건",
    "now": "승인 기다리는 초안 5건",
    "st": "wait"
@@ -411,36 +447,36 @@
    "st": "idle"
   },
   "threads": {
-   "total": 2,
-   "today": 1,
-   "unit": "건",
-   "now": "실패 1건 확인 필요",
-   "st": "err",
-   "link": "https://www.threads.com/@composer.gugak/post/DgQ8T3tBkAv"
-  },
-  "instagram": {
    "total": 3,
    "today": 2,
    "unit": "건",
+   "now": "실패 1건 확인 필요",
+   "st": "err",
+   "link": "https://www.threads.com/@composer.gugak/post/DgR4IQBBlwL"
+  },
+  "instagram": {
+   "total": 4,
+   "today": 3,
+   "unit": "건",
    "now": "최근 게시 완료",
    "st": "idle",
-   "link": "https://www.instagram.com/reel/DgROJnuCR3w/"
+   "link": "https://www.instagram.com/reel/DgR4MPwNU8H/"
   },
   "naver": {
    "total": 1,
    "today": 0,
    "unit": "건",
-   "now": "PC 대기 2건",
+   "now": "PC 대기 3건",
    "st": "wait",
    "link": "https://blog.naver.com/PostView.naver?blogId=composer_gugak&Redirect=View&logNo=224493584590&categoryNo=1&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=10865"
   },
   "sns": {
-   "total": 5,
-   "today": 3,
+   "total": 7,
+   "today": 5,
    "unit": "건",
    "now": "스레드 실패 확인 필요",
    "st": "err",
-   "link": "https://www.threads.com/@composer.gugak/post/DgQ8T3tBkAv"
+   "link": "https://www.threads.com/@composer.gugak/post/DgR4IQBBlwL"
   }
  }
 }
