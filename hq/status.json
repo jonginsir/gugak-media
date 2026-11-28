@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-28T08:45",
- "next_draft": "11/28 (토) 09:00",
+ "generated": "2026-11-28T09:14",
+ "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
   "화",
@@ -23,7 +23,7 @@
   "week": 2,
   "week_target": 7,
   "pending": 3,
-  "problems": 1,
+  "problems": 0,
   "chars": 1399
  },
  "posts": [
@@ -31,9 +31,9 @@
    "id": "20261128-0200-숨비소리-릴스-숨",
    "title": "숨비소리 · 숨 (1분 릴스)",
    "topic": "숨비소리 · 숨 (1분 릴스)",
-   "state": "partial",
+   "state": "published",
    "created": "2026-11-28T01:30:25",
-   "updated": "2026-11-28T02:18:05",
+   "updated": "2026-11-28T09:14:38",
    "chars": 0,
    "sources": 0,
    "approved": true,
@@ -46,9 +46,9 @@
    },
    "channels": {
     "threads": {
-     "ok": false,
-     "link": null,
-     "error": "GitHub 업로드 실패 HTTP 502"
+     "ok": true,
+     "link": "https://www.threads.com/@composer.gugak/post/DgQ8T3tBkAv",
+     "error": null
     },
     "instagram": {
      "ok": true,
@@ -255,12 +255,12 @@
    "st": "idle"
   },
   "threads": {
-   "total": 1,
-   "today": 0,
+   "total": 2,
+   "today": 1,
    "unit": "건",
-   "now": "실패 1건 확인 필요",
-   "st": "err",
-   "link": "https://www.threads.com/@composer.gugak/post/DgM8sOlkUw_"
+   "now": "최근 게시 완료",
+   "st": "idle",
+   "link": "https://www.threads.com/@composer.gugak/post/DgQ8T3tBkAv"
   },
   "instagram": {
    "total": 2,
@@ -279,12 +279,12 @@
    "link": "https://blog.naver.com/PostView.naver?blogId=composer_gugak&Redirect=View&logNo=224493584590&categoryNo=1&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=10865"
   },
   "sns": {
-   "total": 3,
-   "today": 1,
+   "total": 4,
+   "today": 2,
    "unit": "건",
-   "now": "스레드 실패 확인 필요",
-   "st": "err",
-   "link": "https://www.threads.com/@composer.gugak/post/DgM8sOlkUw_"
+   "now": "최근 게시 완료",
+   "st": "idle",
+   "link": "https://www.threads.com/@composer.gugak/post/DgQ8T3tBkAv"
   }
  }
 }
