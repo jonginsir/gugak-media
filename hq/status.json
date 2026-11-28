@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T17:17",
+ "generated": "2026-11-28T17:18",
  "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
@@ -27,66 +27,6 @@
   "chars": 1399
  },
  "posts": [
-  {
-   "id": "20261128-1716-국악-소식",
-   "title": "국악 소식 11.28 (종류별(참가 → 관람))",
-   "topic": "국악 소식",
-   "state": "rejected",
-   "created": "2026-11-28T17:16:44",
-   "updated": null,
-   "chars": 886,
-   "sources": 6,
-   "approved": false,
-   "design": {
-    "ok": true,
-    "slides": 6,
-    "palette": "쪽빛 밤",
-    "refs": 3,
-    "photo": false
-   },
-   "channels": {
-    "threads": {
-     "ok": false,
-     "link": null,
-     "error": null
-    },
-    "instagram": {
-     "ok": false,
-     "link": null,
-     "error": null
-    }
-   }
-  },
-  {
-   "id": "20261128-1715-국악-소식",
-   "title": "국악 소식 11.28 (마감 임박순)",
-   "topic": "국악 소식",
-   "state": "rejected",
-   "created": "2026-11-28T17:15:32",
-   "updated": null,
-   "chars": 886,
-   "sources": 6,
-   "approved": false,
-   "design": {
-    "ok": true,
-    "slides": 6,
-    "palette": "쪽빛 밤",
-    "refs": 3,
-    "photo": false
-   },
-   "channels": {
-    "threads": {
-     "ok": false,
-     "link": null,
-     "error": null
-    },
-    "instagram": {
-     "ok": false,
-     "link": null,
-     "error": null
-    }
-   }
-  },
   {
    "id": "20261128-1420-신명",
    "title": "신명 · 현과 북의 그루브 (1분 릴스)",
@@ -348,38 +288,38 @@
  ],
  "roles": {
   "plan": {
-   "total": 10,
-   "today": 6,
+   "total": 8,
+   "today": 4,
    "unit": "건",
    "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
   },
   "draft": {
-   "total": 7146,
-   "today": 1772,
+   "total": 5374,
+   "today": 0,
    "unit": "자",
-   "now": "최근: 국악 소식 11.28 (종류별(참가 → 관람))",
+   "now": "최근: 신명 · 현과 북의 그루브 (1분 릴스)",
    "st": "idle"
   },
   "check": {
-   "total": 26,
-   "today": 12,
+   "total": 14,
+   "today": 0,
    "unit": "개",
-   "now": "최근 출처 6개 통과",
+   "now": "최근 출처 0개 통과",
    "st": "idle"
   },
   "refs": {
-   "total": 17,
-   "today": 6,
+   "total": 11,
+   "today": 0,
    "unit": "건",
-   "now": "최근 참고 3건",
+   "now": "최근 참고 0건",
    "st": "idle"
   },
   "design": {
-   "total": 30,
-   "today": 12,
+   "total": 18,
+   "today": 0,
    "unit": "장",
-   "now": "최근 쪽빛 밤 6장",
+   "now": "기본 카드로 진행",
    "st": "idle"
   },
   "approve": {
