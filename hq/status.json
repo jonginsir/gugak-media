@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T18:30",
+ "generated": "2026-11-28T18:45",
  "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
@@ -22,7 +22,7 @@
   "published": 3,
   "week": 3,
   "week_target": 7,
-  "pending": 5,
+  "pending": 4,
   "problems": 1,
   "chars": 1399
  },
@@ -31,7 +31,7 @@
    "id": "20261128-1800-왕벌의비행",
    "title": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
    "topic": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
-   "state": "sent",
+   "state": "skipped",
    "created": "2026-11-28T17:55:17",
    "updated": null,
    "chars": 0,
@@ -422,7 +422,7 @@
    "total": 4,
    "today": 3,
    "unit": "건",
-   "now": "승인 기다리는 초안 5건",
+   "now": "승인 기다리는 초안 4건",
    "st": "wait"
   },
   "chief": {
