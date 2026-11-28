@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T19:00",
+ "generated": "2026-11-28T19:01",
  "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
@@ -22,11 +22,41 @@
   "published": 3,
   "week": 3,
   "week_target": 7,
-  "pending": 4,
+  "pending": 5,
   "problems": 1,
   "chars": 1399
  },
  "posts": [
+  {
+   "id": "20261128-1850-왕벌의비행-v2",
+   "title": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
+   "topic": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
+   "state": "sent",
+   "created": "2026-11-28T19:00:22",
+   "updated": null,
+   "chars": 0,
+   "sources": 0,
+   "approved": false,
+   "design": {
+    "ok": false,
+    "slides": 0,
+    "palette": null,
+    "refs": 0,
+    "photo": false
+   },
+   "channels": {
+    "threads": {
+     "ok": false,
+     "link": null,
+     "error": null
+    },
+    "instagram": {
+     "ok": false,
+     "link": null,
+     "error": null
+    }
+   }
+  },
   {
    "id": "20261128-1800-왕벌의비행",
    "title": "왕벌의 비행 · 양금과 휘모리 (1분 릴스)",
@@ -384,8 +414,8 @@
  ],
  "roles": {
   "plan": {
-   "total": 11,
-   "today": 7,
+   "total": 12,
+   "today": 8,
    "unit": "건",
    "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
@@ -422,7 +452,7 @@
    "total": 4,
    "today": 3,
    "unit": "건",
-   "now": "승인 기다리는 초안 4건",
+   "now": "승인 기다리는 초안 5건",
    "st": "wait"
   },
   "chief": {
