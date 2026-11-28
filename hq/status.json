@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T14:15",
+ "generated": "2026-11-28T14:20",
  "next_draft": "11/29 (일) 09:00",
  "draft_days": [
   "월",
@@ -22,11 +22,41 @@
   "published": 2,
   "week": 2,
   "week_target": 7,
-  "pending": 4,
+  "pending": 5,
   "problems": 1,
   "chars": 1399
  },
  "posts": [
+  {
+   "id": "20261128-1420-신명",
+   "title": "신명 · 현과 북의 그루브 (1분 릴스)",
+   "topic": "신명 · 현과 북의 그루브 (1분 릴스)",
+   "state": "sent",
+   "created": "2026-11-28T14:20:05",
+   "updated": null,
+   "chars": 0,
+   "sources": 0,
+   "approved": false,
+   "design": {
+    "ok": false,
+    "slides": 0,
+    "palette": null,
+    "refs": 0,
+    "photo": false
+   },
+   "channels": {
+    "threads": {
+     "ok": false,
+     "link": null,
+     "error": null
+    },
+    "instagram": {
+     "ok": false,
+     "link": null,
+     "error": null
+    }
+   }
+  },
   {
    "id": "20261128-1210-좀비추격-RUN-v2",
    "title": "RUN · 국악기로 그린 좀비 추격 (수정본)",
@@ -258,8 +288,8 @@
  ],
  "roles": {
   "plan": {
-   "total": 7,
-   "today": 3,
+   "total": 8,
+   "today": 4,
    "unit": "건",
    "now": "다음 주제: 장단이란 무엇인가: 세마치와 굿거리",
    "st": "idle"
@@ -268,7 +298,7 @@
    "total": 5374,
    "today": 0,
    "unit": "자",
-   "now": "최근: RUN · 국악기로 그린 좀비 추격 (수정본)",
+   "now": "최근: 신명 · 현과 북의 그루브 (1분 릴스)",
    "st": "idle"
   },
   "check": {
@@ -296,7 +326,7 @@
    "total": 3,
    "today": 2,
    "unit": "건",
-   "now": "승인 기다리는 초안 4건",
+   "now": "승인 기다리는 초안 5건",
    "st": "wait"
   },
   "chief": {
